@@ -1,8 +1,10 @@
-# Fastfile
-platform :android do
-  desc "Build APK for React Native Android"
-  lane :build do
-    gradle(task: "clean")
-    gradle(task: "assembleRelease")
-  end
+default_platform(:android)
+
+platform(:android) do
+ lane :build_apk do
+  gradle(
+   task: "assemble",
+   build_type: "debug"
+  )
+ end
 end
