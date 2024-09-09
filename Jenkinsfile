@@ -23,7 +23,7 @@ pipeline {
         stage('Run Fastlane') {
             steps {
                 // Build the APK using Fastlane
-                sh 'fastlane android upload_to_play_console'
+                sh 'fastlane android build_apk'
             }
         }
 
