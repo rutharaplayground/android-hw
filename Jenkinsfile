@@ -13,12 +13,12 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
-            steps {
-                // Install dependencies
-                sh 'npm install'
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         // Install dependencies
+        //         sh 'npm install'
+        //     }
+        // }
 
         stage('Run Fastlane') {
             steps {
