@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Checkout code from your version control system
-                git branch: 'main', url: 'https://github.com/rutharaplayground/android-hw.git'
+               checkout scm
             }
         }
 
