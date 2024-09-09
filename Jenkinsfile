@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         ANDROID_HOME = "/home/android-sdk"  // Replace with your actual Android SDK path
-        JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-amd64/bin/"  // Replace with your actual Java SDK path
+        JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-amd64/"  // Replace with your actual Java SDK path
         // PATH = "$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
     }
     stages {
