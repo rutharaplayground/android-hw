@@ -4,13 +4,14 @@ pipeline {
         ANDROID_HOME = "/home/android-sdk"  // Replace with your actual Android SDK path
         JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-amd64/"  // Replace with your actual Java SDK path
         // PATH = "$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
+        PATH = "/usr/local/rvm/gems/ruby-3.3.0/bin/:$PATH"
     }
     stages {
         stage('Checkout Code') {
             steps {
                 // Checkout code from your version control system
                checkout scm
-               sh 'chmod +x gradlew'
+               sh 'chmod +x gradlew'               
             }
         }
 
@@ -24,6 +25,7 @@ pipeline {
         stage('Run Fastlane') {
             steps {
                 // Build the APK using Fastlane
+                sh 'echo $PATH'
                 sh 'fastlane android build_apk'
             }
         }
