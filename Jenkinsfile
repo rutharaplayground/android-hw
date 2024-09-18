@@ -26,6 +26,7 @@ pipeline {
             steps {
                 // Build the APK using Fastlane
                 sh 'echo $PATH'
+                sh 'bundle install'
                 sh 'fastlane android build_apk'
             }
         }
